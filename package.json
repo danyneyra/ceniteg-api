@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "notion-client": "^6.16.0"
+  }
+}
