@@ -17,6 +17,7 @@ class Certificate(BaseModel):
     name: str
     document: str
     course: Course
+    code: str
     date: str
     hash: str
     url: str

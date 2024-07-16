@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import config.Notion as Notion
-from schemas.notion import certificateEntitys
 
 app = FastAPI()
 
