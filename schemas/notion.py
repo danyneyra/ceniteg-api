@@ -15,13 +15,14 @@ def certificateEntity(item) -> dict:
         "document": item.get("properties", {}).get("DNI", "").get("rich_text", {})[0].get("plain_text", ""),
         "code": plain_text,
         "course": {
-            "code": item.get("properties", {}).get("Code Course", "").get("rollup", {}).get("array", {})[0].get("rich_text", {})[0].get("plain_text", ""),
+            "code": item.get("properties", {}).get("Code Course", "").get("rollup", {}).get("array", {})[0].get("formula", {}).get("string", ""),
             "name": item.get("properties", {}).get("Course", "").get("formula", {}).get("string", ""),
             "date_start": item.get("properties", {}).get("Date Course", "").get("formula", {}).get("string", ""),
             "hours": item.get("properties", {}).get("Hours Course", "").get("formula", {}).get("string", "")
         },
         "date": item.get("properties", {}).get("Fecha de Emisión", "").get("date", {}).get("start", ""),
         "hash": item.get("properties", {}).get("Hash", "").get("formula", {}).get("string", ""),
+        "type": item.get("properties", {}).get("Type", "").get("formula", {}).get("string", ""),
         "url": item.get("properties", {}).get("Link de Certificado", "").get("formula", {}).get("string", "")
     }
 

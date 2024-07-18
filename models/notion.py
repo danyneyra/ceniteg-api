@@ -20,4 +20,5 @@ class Certificate(BaseModel):
     code: str
     date: str
     hash: str
+    type: str
     url: str
